@@ -7944,6 +7944,12 @@ void decode_execute() {
 
         return;
       }
+      if (funct7 == F7_SRL) {
+
+          do_srl();
+
+        return;
+      }
     } else if (funct3 == F3_REMU) {
       if (funct7 == F7_REMU) {
         if (debug) {
@@ -7996,15 +8002,7 @@ void decode_execute() {
         return;
       }
     }
-    // MY CODE RUN
-    else if (funct3 == F3_SRL) {
-      if (funct7 == F7_SRL) {
 
-          do_srl();
-
-        return;
-      }
-    }
     else if (funct3 == F3_SLL) {
       if (funct7 == F7_SLL) {
 
